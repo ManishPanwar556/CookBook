@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_navigation"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.cookbook.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_cuisineFragment"
+            app:destination="@id/cuisineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeListFragment"
+        android:name="com.example.cookbook.RecipeListActivity"
+        android:label="fragment_recipe_list"
+        tools:layout="@layout/fragment_recipe_list" />
+    <fragment
+        android:id="@+id/cuisineFragment"
+        android:name="com.example.cookbook.CuisineFragment"
+        android:label="CuisineFragment"
+        tools:layout="@layout/activity_cuisine">
+        <action
+            android:id="@+id/action_cuisineFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment" />
+    </fragment>
+</navigation>

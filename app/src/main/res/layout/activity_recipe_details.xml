@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipeDetailsActivity"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Recipe"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:layout_marginTop="40dp"/>
+    <EditText
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dishTitle"
+        android:hint="Dish Title"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="100dp"
+        android:hint="Enter Recipe Here"
+        android:id="@+id/recipeDescription"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:hint="Time To Make"
+        android:id="@+id/time"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cuisineSpinner"
+        android:layout_margin="10dp"
+        android:entries="@array/cuisine"
+        android:layout_marginTop="20dp"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveRecipe"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:text="Post Recipe"/>
+</LinearLayout>

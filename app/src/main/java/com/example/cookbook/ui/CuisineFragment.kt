@@ -1,4 +1,4 @@
-package com.example.cookbook
+package com.example.cookbook.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -50,7 +50,7 @@ class CuisineFragment : Fragment() {
 
     private fun navigateToRecipeList(cuisine:String) {
 
-        val intent=Intent(requireContext(),RecipeListActivity::class.java)
+        val intent=Intent(requireContext(), RecipeListActivity::class.java)
         intent.putExtra("cuisine",cuisine)
         startActivity(intent)
     }

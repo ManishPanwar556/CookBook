@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.cookbook.Comment
+import com.example.cookbook.models.Comment
 import com.example.cookbook.R
 import com.example.cookbook.databinding.CommentsItemBinding
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter

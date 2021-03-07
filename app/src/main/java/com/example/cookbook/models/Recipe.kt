@@ -1,4 +1,4 @@
-package com.example.cookbook
+package com.example.cookbook.models
 
 data class Recipe(
     var dishName: String="",

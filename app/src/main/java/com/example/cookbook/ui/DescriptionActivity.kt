@@ -1,4 +1,4 @@
-package com.example.cookbook
+package com.example.cookbook.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cookbook.adapter.CommentsAdapter
 import com.example.cookbook.databinding.ActivityDescriptionBinding
+import com.example.cookbook.models.Comment
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -51,9 +52,11 @@ class DescriptionActivity : AppCompatActivity() {
         if (binding.commentEditText.text.isNotEmpty()) {
             val rid=UUID.randomUUID().toString()
             db.collection("users").document(auth.currentUser.uid).get().addOnSuccessListener {
+                val message=binding.commentEditText.text.toString()
                 val name = it.get("name").toString()
                 val url = it.get("url").toString()
-                val comment = Comment(binding.commentEditText.text.toString(), name, url)
+                val comment = Comment(message, name, url)
+                binding.commentEditText.text.clear()
                 db.collection("comments").document(id).collection(creatorId).document(rid).set(comment).addOnSuccessListener {
                     Toast.makeText(this, "Posted Successfully", Toast.LENGTH_SHORT).show()
                 }.addOnFailureListener {

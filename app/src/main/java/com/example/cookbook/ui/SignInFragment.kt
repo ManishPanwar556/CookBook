@@ -1,4 +1,4 @@
-package com.example.cookbook
+package com.example.cookbook.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,8 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.commit
-import androidx.navigation.fragment.NavHostFragment
+import com.example.cookbook.R
 import com.example.cookbook.databinding.FragmentSignInBinding
+import com.example.cookbook.models.User
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -105,7 +106,7 @@ class SignInFragment : Fragment() {
         binding.progressBar.visibility=View.INVISIBLE
         val supportFragmentManager=requireActivity().supportFragmentManager
         supportFragmentManager.commit {
-            replace(R.id.nav_host_fragment,CuisineFragment())
+            replace(R.id.nav_host_fragment, CuisineFragment())
             setReorderingAllowed(true)
         }
     }

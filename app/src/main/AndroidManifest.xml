@@ -9,21 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CookBook">
-        <activity android:name=".DescriptionActivity"
-            android:parentActivityName=".RecipeListActivity">
-
-        </activity>
+        <activity android:name=".ui.FavoritesActivity"
+            android:parentActivityName=".ui.RecipeListActivity"/>
         <activity
-            android:name=".RecipeDetailsActivity"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity">
+            android:name=".ui.DescriptionActivity"
+            android:parentActivityName=".ui.RecipeListActivity"/>
+        <activity
+            android:name=".ui.RecipeDetailsActivity"
+            android:parentActivityName=".ui.MainActivity" />
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RecipeListActivity" />
+        <activity android:name=".ui.RecipeListActivity" />
     </application>
 
 </manifest>

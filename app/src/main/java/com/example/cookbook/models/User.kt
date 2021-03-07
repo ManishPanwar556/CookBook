@@ -1,4 +1,4 @@
-package com.example.cookbook
+package com.example.cookbook.models
 
 data class User(
     val name:String?,

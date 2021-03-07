@@ -4,21 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecipeListActivity">
+    tools:context=".ui.RecipeListActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rev"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/progressBar"/>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addRecipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:id="@+id/addRecipe"
         android:layout_margin="20dp"
-        app:backgroundTint="@android:color/holo_red_light"
         android:src="@drawable/ic_baseline_add_24"
+        app:backgroundTint="@android:color/holo_red_light"
         app:tint="@color/white" />
 
 </FrameLayout>

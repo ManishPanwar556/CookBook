@@ -1,13 +1,13 @@
-package com.example.cookbook
+package com.example.cookbook.ui
 
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
-import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cookbook.databinding.ActivityRecipeDetailsBinding
+import com.example.cookbook.models.Recipe
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*

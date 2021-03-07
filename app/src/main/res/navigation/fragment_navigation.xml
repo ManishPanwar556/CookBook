@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.example.cookbook.SignInFragment"
+        android:name="com.example.cookbook.ui.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" >
         <action
@@ -16,12 +16,12 @@
     </fragment>
     <fragment
         android:id="@+id/recipeListFragment"
-        android:name="com.example.cookbook.RecipeListActivity"
+        android:name="com.example.cookbook.ui.RecipeListActivity"
         android:label="fragment_recipe_list"
         tools:layout="@layout/fragment_recipe_list" />
     <fragment
         android:id="@+id/cuisineFragment"
-        android:name="com.example.cookbook.CuisineFragment"
+        android:name="com.example.cookbook.ui.CuisineFragment"
         android:label="CuisineFragment"
         tools:layout="@layout/activity_cuisine">
         <action
